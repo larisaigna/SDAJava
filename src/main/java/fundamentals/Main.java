@@ -22,8 +22,11 @@ public class Main {
 
         //Task1
         taskExercises1.circlePerimeter();
-*/
-        TaskExercises.bodyMassIndex();
 
+        //Task2
+        TaskExercises.bodyMassIndex();
+     */
+        //Task 3
+        TaskExercises.fizzBuzz();
     }
 }
