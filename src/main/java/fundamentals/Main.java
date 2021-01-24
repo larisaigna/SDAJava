@@ -28,8 +28,11 @@ public class Main {
 
         //Task 3
         TaskExercises.fizzBuzz();
-     */
+
         //Task 4
         TaskExercises.primeNumbers1();
+
+       */
+        TaskExercises.primeNumbers2();
     }
 }

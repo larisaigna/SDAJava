@@ -79,4 +79,21 @@ public class TaskExercises {
         }
 
     }
+    public static void primeNumbers2(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a positive number: ");
+        int number = scanner.nextInt();
+        System.out.println("The prime numbers are: ");
+        for (int i = 2; i < number; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0){
+                    isPrime = false;
+                }
+            }
+            if (isPrime) {
+                System.out.println(i);
+            }
+        }
+    }
 }
