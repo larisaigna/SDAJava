@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-        //stativ vs non-static fields and methods
-        TaskExercises taskExercises1 = new TaskExercises();// nestatic tine de obiect, atunci folosim new
+        //static vs non-static fields and methods
+      /*  TaskExercises taskExercises1 = new TaskExercises();// nestatic tine de obiect, atunci folosim new
         TaskExercises taskExercises2 = new TaskExercises();
         System.out.println("x = " + taskExercises1.x);
         System.out.println("y = " + taskExercises1.y);
@@ -22,6 +22,8 @@ public class Main {
 
         //Task1
         taskExercises1.circlePerimeter();
+*/
+        TaskExercises.bodyMassIndex();
 
     }
 }
