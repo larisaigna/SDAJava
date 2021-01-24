@@ -31,8 +31,10 @@ public class Main {
 
         //Task 4
         TaskExercises.primeNumbers1();
-
-       */
         TaskExercises.primeNumbers2();
+        */
+        //Task 5
+        TaskExercises.fibonacciNumber();
+
     }
 }

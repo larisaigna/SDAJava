@@ -61,25 +61,26 @@ public class TaskExercises {
 
     // Write an application that takes a positive number from the user (type int) and prints all prime numbers greater
     // than 1 and less than the given number.
-    public static void primeNumbers1(){
+    public static void primeNumbers1() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a positive number: ");
         int number = scanner.nextInt();
         System.out.println("The prime numbers are: ");
-        for(int i = 2; i < number; i++) {
+        for (int i = 2; i < number; i++) {
             int counter = 0;
-            for (int k = 1; k<=i; k++) {
+            for (int k = 1; k <= i; k++) {
                 if (i % k == 0) {
-                  counter++;
+                    counter++;
                 }
             }
-            if (counter <= 2){
+            if (counter <= 2) {
                 System.out.println(i);
             }
         }
 
     }
-    public static void primeNumbers2(){
+
+    public static void primeNumbers2() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a positive number: ");
         int number = scanner.nextInt();
@@ -87,7 +88,7 @@ public class TaskExercises {
         for (int i = 2; i < number; i++) {
             boolean isPrime = true;
             for (int j = 2; j < i; j++) {
-                if (i % j == 0){
+                if (i % j == 0) {
                     isPrime = false;
                 }
             }
@@ -96,4 +97,34 @@ public class TaskExercises {
             }
         }
     }
+
+    // Write an application that will take a positive number from the user (type int) and calculate the Fibonacci number
+    // at the indicated index. For example, if the number equals 5, your program should print the fifth Fibonacci number.
+    // In Fibonacci sequence, each number is the sum of the two preceding ones.
+    public static void fibonacciNumber() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a number: ");
+        int number = scanner.nextInt();
+        int[] myArray = new int[number + 1];
+
+        System.out.println("Fibonnaci sequence is: ");
+        for (int i = 0; i < myArray.length; i++) {
+            if (i > 1) {
+                myArray[i] = myArray[i - 1] + myArray[i - 2];
+                System.out.print(myArray[i] + " ");
+            } else {
+                myArray[i] = i;
+                System.out.print(myArray[i] + " ");
+            }
+        }
+        System.out.println("\nFibonacci number at " + number + " index is: " + myArray[number]);
+    }
 }
+
+
+
+
+
+
+
+
