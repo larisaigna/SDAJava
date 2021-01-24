@@ -25,8 +25,11 @@ public class Main {
 
         //Task2
         TaskExercises.bodyMassIndex();
-     */
+
         //Task 3
         TaskExercises.fizzBuzz();
+     */
+        //Task 4
+        TaskExercises.primeNumbers1();
     }
 }

@@ -59,4 +59,24 @@ public class TaskExercises {
         }
     }
 
+    // Write an application that takes a positive number from the user (type int) and prints all prime numbers greater
+    // than 1 and less than the given number.
+    public static void primeNumbers1(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a positive number: ");
+        int number = scanner.nextInt();
+        System.out.println("The prime numbers are: ");
+        for(int i = 2; i < number; i++) {
+            int counter = 0;
+            for (int k = 1; k<=i; k++) {
+                if (i % k == 0) {
+                  counter++;
+                }
+            }
+            if (counter <= 2){
+                System.out.println(i);
+            }
+        }
+
+    }
 }
