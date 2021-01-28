@@ -35,8 +35,14 @@ public class Main {
 
         //Task 5
         TaskExercises.fibonacciNumber();
-        */
+
         //Task 6
         TaskExercises.sumOfDigits();
+
+        //Task 7
+        TaskExercises.readTexts();
+        */
+        //Task 8
+        TaskExercises.percentageOfOccurrences();
     }
 }

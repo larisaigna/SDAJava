@@ -135,6 +135,73 @@ public class TaskExercises {
         } while (num > 0);
 
         System.out.println("The sum of digits is: " + sum);
+    }
+    // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!"
+    // and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide
+    // any text, write "No text provided".
+    public static void readTexts () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input text: ");
+        String text = " ";
+        StringBuilder wholeText = new StringBuilder();
+
+        while (!(text.equals("Enough!"))) {
+            text = scanner.next();
+            if (!(text.equals("Enough!"))) {
+                wholeText.append(text);
+                wholeText.append(" ");
+            }
+        }
+
+        System.out.println("Text: " + wholeText);
+        StringBuilder word = new StringBuilder();
+        boolean newWord = false;
+        int charCounter = 0;
+        int max = 0;
+        StringBuilder maxWord = new StringBuilder();
+        for (int i = 0; i < wholeText.length(); i++) {
+
+            if (wholeText.charAt(i) != ' ') {
+                word.append(wholeText.charAt(i));
+                charCounter++;
+            } else newWord = true;
+            if ((newWord == true) || (i == (wholeText.length() - 1))) {
+                if (charCounter > max) {
+                    max = charCounter;
+                    maxWord = word;
+                }
+                charCounter = 0;
+                word = new StringBuilder();
+                newWord = false;
+            }
+        }
+
+        if (max == 0) System.out.println("No text provided ");
+        else
+            System.out.println("The longest of the given text is: " + maxWord);
+
+    }
+
+   //Write an application that reads a text from the user (type String) and counts a percentage of occurrences of a space
+    // character.
+    public static void percentageOfOccurrences() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input text: ");
+        String text = scanner.nextLine();
+        int totalChars = text.length();
+        int spaces = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+            if (ch == ' ') {
+                ++spaces;
+            }
+        }
+        float spacePercentage = (spaces * (float)100) / totalChars;
+        System.out.println("White spaces: " + spaces) ;
+        System.out.println("Percentage of ocurrences of a space character: " + spacePercentage + " %");
+
+
 
     }
 }
