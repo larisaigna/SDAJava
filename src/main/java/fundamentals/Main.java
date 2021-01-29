@@ -41,8 +41,13 @@ public class Main {
 
         //Task 7
         TaskExercises.readTexts();
-        */
+
         //Task 8
         TaskExercises.percentageOfOccurrences();
+*/
+
+        //Task 9
+        TaskExercises.stuttersString();
+
     }
 }

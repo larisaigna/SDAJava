@@ -119,11 +119,12 @@ public class TaskExercises {
         }
         System.out.println("\nFibonacci number at " + number + " index is: " + myArray[number]);
     }
+
     // Write an application that gets one positive number (type int) from the user and calculates a sum of digits of the
     // given number. Hint: to make some operations on every single digit of the number (digit by digit), you can
     // calculate the remainder of dividing the number by 10 (to get the value of the last digit) and divide the number
     // by 10 (to "move" to the next digit).
-    public static void sumOfDigits () {
+    public static void sumOfDigits() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input positive number: ");
         int num = scanner.nextInt();
@@ -136,10 +137,11 @@ public class TaskExercises {
 
         System.out.println("The sum of digits is: " + sum);
     }
-    // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!"
-    // and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide
-    // any text, write "No text provided".
-    public static void readTexts () {
+
+        // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!"
+        // and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide
+        // any text, write "No text provided".
+    public static void readTexts() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input text: ");
         String text = " ";
@@ -165,6 +167,7 @@ public class TaskExercises {
                 word.append(wholeText.charAt(i));
                 charCounter++;
             } else newWord = true;
+
             if ((newWord == true) || (i == (wholeText.length() - 1))) {
                 if (charCounter > max) {
                     max = charCounter;
@@ -182,7 +185,7 @@ public class TaskExercises {
 
     }
 
-   //Write an application that reads a text from the user (type String) and counts a percentage of occurrences of a space
+    //Write an application that reads a text from the user (type String) and counts a percentage of occurrences of a space
     // character.
     public static void percentageOfOccurrences() {
         Scanner scanner = new Scanner(System.in);
@@ -197,11 +200,37 @@ public class TaskExercises {
                 ++spaces;
             }
         }
-        float spacePercentage = (spaces * (float)100) / totalChars;
-        System.out.println("White spaces: " + spaces) ;
+        float spacePercentage = (spaces * (float) 100) / totalChars;
+        System.out.println("White spaces: " + spaces);
         System.out.println("Percentage of ocurrences of a space character: " + spacePercentage + " %");
 
+    }
+    // Write an application that "stutters", that is, reads the user's text (type String), and prints the given text,
+    // in which each word is printed twice. For example, for the input: "This is my test" the application should print
+    // "This This is is my my test test".
+    public static void stuttersString () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input text: ");
+        String text = scanner.nextLine();
+        StringBuilder wholeText = new StringBuilder();
+        StringBuilder word = new StringBuilder();
 
+        boolean newWord = false;
+
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) != ' ') {
+                word.append(text.charAt(i));
+            } else newWord = true;
+
+            if ((newWord == true) || (i == (text.length() - 1))) {
+               wholeText.append(word + " " + word + " ");
+
+                word = new StringBuilder("");
+                newWord = false;
+            }
+        }
+
+        System.out.println(wholeText);
 
     }
 }
