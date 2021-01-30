@@ -208,6 +208,42 @@ public class TaskExercises {
 
     }
 
+    public static void readTexts2() {
+        System.out.println("Input text: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = ""; // pentru a citi cuvintele de la tastatura
+        String longestWord = ""; // pentru a retine cel mai lung cuvant
+        do {
+            word = scanner.next();
+            if (!word.equals("Enough!") && longestWord.length() < word.length()) {
+                longestWord = word;
+            }
+        } while (!word.equals("Enough!"));
+        if (longestWord.length() == 0) { // sau longestWord.length() == ""
+            System.out.println("No text provided");
+            return;
+        }
+        System.out.println("The longest word is: " + longestWord);
+    }
+
+    public static void readTexts3() {
+        System.out.println("Input text: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWord = "";
+        while (!word.equals("Enough!")) {
+            if (longestWord.length() < word.length()) {
+                longestWord = word;
+            }
+            word = scanner.next();
+        }
+        if (longestWord.length() == 0) {
+            System.out.println("No text provided");
+            return;
+        }
+        System.out.println("The longest word is: " + longestWord);
+    }
+
     //Write an application that reads a text from the user (type String) and counts a percentage of occurrences of a space
     // character.
     public static void percentageOfOccurrences() {

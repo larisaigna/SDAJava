@@ -26,11 +26,11 @@ public class Main {
 
         //Task2
         TaskExercises.bodyMassIndex();
-*/
+
         //Task 3
         TaskExercises.fizzBuzz();
         TaskExercises.fizzBuzz1();
-/*
+
         //Task 4
         TaskExercises.primeNumbers1();
         TaskExercises.primeNumbers2();
@@ -44,6 +44,11 @@ public class Main {
         //Task 7
         TaskExercises.readTexts();
 
+        TaskExercises.readTexts2();
+
+       */
+        TaskExercises.readTexts3();
+/*
         //Task 8
         TaskExercises.percentageOfOccurrences();
 
@@ -54,7 +59,7 @@ public class Main {
         //Task 10
         TaskExercises.printAllPrimeNumbers();
 
-       */
+ */
 
     }
 }
