@@ -1,8 +1,9 @@
 package fundamentals;
 
 import java.util.Scanner;
-  // declararea unei constante = i se atribuie public static final
-    //  TaskExercises.circlePerimeter(); daca tine de clasa se poate accesa prin inermediul clasei, ex. public static void circlePerimeter
+
+// declararea unei constante = i se atribuie public static final
+//  TaskExercises.circlePerimeter(); daca tine de clasa se poate accesa prin inermediul clasei, ex. public static void circlePerimeter
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -25,10 +26,11 @@ public class Main {
 
         //Task2
         TaskExercises.bodyMassIndex();
-
+*/
         //Task 3
         TaskExercises.fizzBuzz();
-
+        TaskExercises.fizzBuzz1();
+/*
         //Task 4
         TaskExercises.primeNumbers1();
         TaskExercises.primeNumbers2();
@@ -44,10 +46,15 @@ public class Main {
 
         //Task 8
         TaskExercises.percentageOfOccurrences();
-*/
 
         //Task 9
         TaskExercises.stuttersString();
+
+
+        //Task 10
+        TaskExercises.printAllPrimeNumbers();
+
+       */
 
     }
 }

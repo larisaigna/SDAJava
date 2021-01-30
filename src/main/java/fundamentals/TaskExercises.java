@@ -59,6 +59,29 @@ public class TaskExercises {
         }
     }
 
+    public static void fizzBuzz1() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a positive number: ");
+        int number = scanner.nextInt();
+        for (int i = 1; i <= number; i++) {
+            if ((i % 3 == 0) && (i % 7 == 0)) {
+                System.out.println("Fizz buzz");
+                continue;// nu lasa sa mearga la instructiunile de sub, continua la urmatoarea iteratie din for
+            }
+            if (i % 3 == 0) {
+                System.out.println("Buzz");
+                continue;
+            }
+            if (i % 7 == 0) {
+                System.out.println("Fizz");
+                continue;
+            }
+            System.out.println(i);
+
+        }
+    }
+
+
     // Write an application that takes a positive number from the user (type int) and prints all prime numbers greater
     // than 1 and less than the given number.
     public static void primeNumbers1() {
@@ -138,9 +161,9 @@ public class TaskExercises {
         System.out.println("The sum of digits is: " + sum);
     }
 
-        // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!"
-        // and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide
-        // any text, write "No text provided".
+    // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!"
+    // and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide
+    // any text, write "No text provided".
     public static void readTexts() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input text: ");
@@ -208,7 +231,7 @@ public class TaskExercises {
     // Write an application that "stutters", that is, reads the user's text (type String), and prints the given text,
     // in which each word is printed twice. For example, for the input: "This is my test" the application should print
     // "This This is is my my test test".
-    public static void stuttersString () {
+    public static void stuttersString() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input text: ");
         String text = scanner.nextLine();
@@ -223,7 +246,7 @@ public class TaskExercises {
             } else newWord = true;
 
             if ((newWord == true) || (i == (text.length() - 1))) {
-               wholeText.append(word + " " + word + " ");
+                wholeText.append(word + " " + word + " ");
 
                 word = new StringBuilder("");
                 newWord = false;
@@ -231,6 +254,60 @@ public class TaskExercises {
         }
 
         System.out.println(wholeText);
+
+    }
+
+    //Write an application that takes a positive number from the user (type int) and prints all prime numbers greater
+    // than 1 and less than the given number.
+    public static void printAllPrimeNumbers() {
+        System.out.println("Input number: ");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        if (number <= 1) {
+            System.out.println("The number is not greater than 1 ");
+            return; // intrerupem executia metodei, dar nu returnam nimic
+        }
+        for (int i = 2; i < number; i++) {
+            if (isPrime(i)) {
+                System.out.println(i);
+            }
+        }
+
+    }
+
+    private static boolean isPrime(int nr) {// private = poate fi folosit doar in clasa respectiva;
+
+        for (int i = 2; i < nr; i++) { // i<=nr/2
+            int rest = nr % i;
+            if (rest == 0) { // if(nr % i == 0) si nu mai declaram variabila rest
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isPrime1(int nr) {
+        boolean isPrimeNo = true;
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                isPrimeNo = false;
+                break; //cand gaseste un divizor iese din for
+            }
+        }
+        return isPrimeNo;
+
+    }
+
+    private static boolean isPrime2(int nr) {
+        boolean isPrimeNo = true;
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i != 0) {
+                continue;
+            }
+            isPrimeNo = false;
+            break;
+        }
+        return isPrimeNo;
 
     }
 }
