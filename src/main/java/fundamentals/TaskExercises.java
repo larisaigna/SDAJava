@@ -228,6 +228,7 @@ public class TaskExercises {
         System.out.println("Percentage of ocurrences of a space character: " + spacePercentage + " %");
 
     }
+
     // Write an application that "stutters", that is, reads the user's text (type String), and prints the given text,
     // in which each word is printed twice. For example, for the input: "This is my test" the application should print
     // "This This is is my my test test".
