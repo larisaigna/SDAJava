@@ -46,7 +46,7 @@ public class Main {
 
         TaskExercises.readTexts2();
 
-       */
+
         TaskExercises.readTexts3();
 /*
         //Task 8
@@ -54,12 +54,17 @@ public class Main {
 
         //Task 9
         TaskExercises.stuttersString();
-
+        TaskExercises.stuttersString2();
 
         //Task 10
         TaskExercises.printAllPrimeNumbers();
 
- */
+
+        TaskExercises.testStrings();
+
+       */
+        TaskExercises.testObjects();
+
 
     }
 }
