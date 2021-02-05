@@ -28,6 +28,7 @@ public class Client {
     }
 
     public void setBankAccounts(BankAccount[] bankAccounts) {
+
         this.bankAccounts = bankAccounts;
     }
 
@@ -58,28 +59,71 @@ public class Client {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getCnp() {
+
         return cnp;
     }
 
     public void setCnp(String cnp) {
+
         this.cnp = cnp;
     }
 
     public BankAccount getBankAccount() {
+
         return bankAccount;
     }
 
 
     public void setBankAccount(BankAccount bankAccount) {
+
         this.bankAccount = bankAccount;
+    }
+
+    public void addBankAccount(BankAccount bankAccount) {
+
+        int index = 0;
+        for (int i = 0; i < this.bankAccounts.length; i++) {
+            if (this.bankAccounts[i].getType().equals(bankAccount.getType())) {
+                System.out.println("Error: This type of banking account already exists");
+                return;
+            }
+            index = i;
+        }
+        this.bankAccounts[index] = bankAccount;
+    }
+
+    public BankAccount getSavingAccount() {
+        for (int i = 0; i < this.bankAccounts.length; i++) {
+            if (this.bankAccounts[i].getType().equals("SAVING")) {
+                return bankAccounts[i];
+            }
+        }
+        System.out.println("Error: type <SAVING> account does not exist");
+        return null;
+    }
+
+    public void removeAccountByType(String accountType) {
+        boolean removedAccount = true;
+        for (int i = 0; i < this.bankAccounts.length; i++) {
+            if (this.bankAccounts[i].getType().equals(accountType)) {
+                this.bankAccounts[i] = new BankAccount("", "");
+                System.out.println("Operation removed account succeed");
+                removedAccount = true;
+            }
+        }
+        if (removedAccount == false) {
+            System.out.println("Error: The account you want to remove does not exist");
+        }
     }
 
 }
